@@ -45,9 +45,9 @@
                 <a href="#">{{ cat }}</a>
                 {% endfor %}
               </div>
-              <h2 class="h4"><a href="post.html">{{ obj.title }}</a></h2>
+              <h2 class="h4"><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a></h2>
             </header>
-            <p>{{ obj.overview }}</p>
+            <p>{{ obj.overview|linebreaks|truncatechars:200 }}</p>
             <footer class="post-footer d-flex align-items-center"><a href="#"
                 class="author d-flex align-items-center flex-wrap">
                 <div class="avatar"><img src="{{ obj.author.profile_picture.url }}" alt="..." class="img-fluid"></div>
@@ -99,40 +99,12 @@
               <a href="#">{{ cat }}</a>
               {% endfor %}
             </div>
-            <h3 class="h4">
-          </div><a href="post.html">{{ obj.title }}</a></h3>
-          <p class="text-muted">{{ obj.overview }}</p>
+          </div>
+          <h3 class="h4"><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a></h3>
+          <p class="text-muted">{{ obj.overview|linebreaks|truncatechars:200 }}</p>
         </div>
       </div>
       {% endfor %}
-      {% comment %} <div class="post col-md-4">
-        <div class="post-thumbnail"><a href="post.html"><img src="{% static 'img/blog-2.jpg' %}" alt="..."
-              class="img-fluid"></a></div>
-        <div class="post-details">
-          <div class="post-meta d-flex justify-content-between">
-            <div class="date">20 May | 2016</div>
-            <div class="category"><a href="#">Technology</a></div>
-          </div><a href="post.html">
-            <h3 class="h4">Diversity in Engineering: Effect on Questions</h3>
-          </a>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore.</p>
-        </div>
-      </div>
-      <div class="post col-md-4">
-        <div class="post-thumbnail"><a href="post.html"><img src="{% static 'img/blog-3.jpg' %}" alt="..."
-              class="img-fluid"></a></div>
-        <div class="post-details">
-          <div class="post-meta d-flex justify-content-between">
-            <div class="date">20 May | 2016</div>
-            <div class="category"><a href="#">Financial</a></div>
-          </div><a href="post.html">
-            <h3 class="h4">Alberto Savoia Can Teach You About Interior</h3>
-          </a>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore.</p>
-        </div>
-      </div> {% endcomment %}
     </div>
   </div>
 </section>
