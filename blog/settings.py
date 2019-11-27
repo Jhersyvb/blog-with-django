@@ -161,4 +161,6 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
+ACCOUNT_ADAPTER = 'users.allauth.AccountAdapter'
+
 SITE_ID = 1
