@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '50bl+-m&u9+r1*wm0(edz=j_9=9pa#b@9yyk0uegl&2gi*^qq5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['167.172.250.179', 'blog.contable.vip']
 
